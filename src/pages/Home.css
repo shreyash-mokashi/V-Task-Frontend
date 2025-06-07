@@ -1,0 +1,128 @@
+.home-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to top left, #f9fafb, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.home-container:hover {
+  transform: translateY(-3px);
+}
+
+.home-title {
+  font-size: 2.75rem;
+  margin-bottom: 0.2rem;
+  color: #1a202c;
+  font-weight: 700;
+  text-align: center;
+}
+
+.user-name {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.home-subtitle {
+  color: #4b5563;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.home-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+.home-nav a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+}
+
+.home-nav a:hover {
+  color: #2563eb;
+}
+
+.active-link {
+  border-bottom: 3px solid #2563eb;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.home-content {
+  border: 1px solid #d1d5db;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f8fafc;
+  min-height: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logout-button {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.logout-button:hover {
+  background: linear-gradient(to right, #b91c1c, #991b1b);
+  transform: scale(1.03);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .home-nav {
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-content {
+    padding: 16px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.75rem;
+  }
+
+  .home-nav a {
+    font-size: 0.95rem;
+  }
+
+  .logout-button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

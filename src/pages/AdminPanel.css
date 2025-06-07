@@ -1,0 +1,205 @@
+.admin-panel-container {
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(to top right, #f8fafc, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s ease-in-out;
+}
+
+.admin-panel-container:hover {
+  transform: translateY(-4px);
+}
+
+.admin-panel-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.no-users-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-top: 2rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  min-width: 700px;
+}
+
+.admin-table thead tr {
+  background-color: #edf2f7;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.85rem 1.25rem;
+  text-align: left;
+  background-color: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.admin-table th {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #4a5568;
+  background-color: #f1f5f9;
+}
+
+.table-row:hover td {
+  background-color: #f0f4f8;
+}
+
+.name-cell {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.email-cell {
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+.action-column {
+  text-align: center;
+  width: 140px;
+}
+
+.action-cell {
+  text-align: center;
+}
+
+.delete-button {
+  background: linear-gradient(to right, #f56565, #e53e3e);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+  background: linear-gradient(to right, #c53030, #9b2c2c);
+  transform: scale(1.05);
+}
+
+.delete-button:focus {
+  outline: 2px solid #fc8181;
+  outline-offset: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-panel-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .admin-panel-title {
+    font-size: 2rem;
+  }
+
+  .admin-table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 0.7rem;
+  }
+
+  .delete-button {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-panel-title {
+    font-size: 1.75rem;
+  }
+
+  .admin-table {
+    font-size: 0.85rem;
+  }
+
+  .delete-button {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .action-column {
+    width: 100px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 0.5rem;
+  }
+}
+
+.view-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.view-buttons button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  background-color: #edf2f7;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.view-buttons button:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.view-buttons button.active {
+  background: linear-gradient(to right, #4299e1, #3182ce);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 12px rgba(66, 153, 225, 0.4);
+  transform: scale(1.05);
+}
+
+.view-buttons button:focus {
+  outline: 2px solid #90cdf4;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .view-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .view-buttons button {
+    width: 100%;
+  }
+}

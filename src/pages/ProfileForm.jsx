@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 import "./ProfileForm.css";
 
-const API_BASE_URL = "https://v-task-backend.onrender.com";
+const API_BASE_URL = "https://v-task-backend.onrender.com/api";
 
 const ProfileForm = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +27,7 @@ const ProfileForm = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`${API_BASE_URL}/api/profile/me`, {
+        const res = await axios.get(`${API_BASE_URL}/profile/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

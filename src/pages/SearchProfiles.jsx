@@ -16,7 +16,7 @@ export default function SearchProfiles() {
       setLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/profile/search", {
+        const res = await axios.get("https://v-task-backend.onrender.com/api/profile/search", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -64,7 +64,7 @@ export default function SearchProfiles() {
       if (name) params.append("name", name);
       if (skill) params.append("skill", skill);
 
-      const res = await axios.get(`http://localhost:5000/api/profile/search?${params.toString()}`, {
+      const res = await axios.get(`https://v-task-backend.onrender.com/api/profile/search?${params.toString()}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

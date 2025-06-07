@@ -39,7 +39,7 @@ const AdminPanel = () => {
   const deleteUser = async (id) => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/admin/user/${id}`, {
+      await axios.delete(`/admin/user/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(users.filter((user) => user._id !== id));
@@ -54,7 +54,7 @@ const AdminPanel = () => {
   const deletePost = async (id) => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/admin/post/${id}`, {
+      await axios.delete(`/admin/post/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(posts.filter((post) => post._id !== id));

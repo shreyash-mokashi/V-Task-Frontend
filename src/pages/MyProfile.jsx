@@ -29,7 +29,7 @@ export default function MyProfile() {
       {profile.imageUrl && (
         <div className="profile-image-wrapper">
           <img
-            src={`http://localhost:5000${profile.imageUrl}`}
+            src={`${profile.imageUrl}`}
             alt="Profile"
             className="profile-image"
           />

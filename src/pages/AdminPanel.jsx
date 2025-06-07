@@ -12,7 +12,7 @@ const AdminPanel = () => {
   // Fetch users
   const fetchUsers = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/users", {
+      const res = await axios.get("/admin/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);

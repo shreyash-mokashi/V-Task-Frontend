@@ -29,7 +29,7 @@ const Posts = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get("/posts", config);
+      const res = await axios.get("https://v-task-backend.onrender.com/api/posts", config);
       setPosts(res.data);
       setLoading(false);
     } catch (err) {
@@ -45,7 +45,7 @@ const Posts = () => {
     if (!text) return alert("Please enter text");
     try {
       const body = JSON.stringify({ text });
-      const res = await axios.post("/posts", body, config);
+      const res = await axios.post("https://v-task-backend.onrender.com/api/posts", body, config);
       setPosts([res.data, ...posts]);
       setText("");
     } catch (err) {
@@ -56,7 +56,7 @@ const Posts = () => {
 
   const likePost = async (postId) => {
     try {
-      const res = await axios.put(`/posts/like/${postId}`, {}, config);
+      const res = await axios.put(`https://v-task-backend.onrender.com/api/posts/like/${postId}`, {}, config);
       setPosts(posts.map(post => post._id === postId ? { ...post, likes: res.data } : post));
     } catch (err) {
       console.error(err);
@@ -65,7 +65,7 @@ const Posts = () => {
 
   const unlikePost = async (postId) => {
     try {
-      const res = await axios.put(`/posts/unlike/${postId}`, {}, config);
+      const res = await axios.put(`https://v-task-backend.onrender.com/api/posts/unlike/${postId}`, {}, config);
       setPosts(posts.map(post => post._id === postId ? { ...post, likes: res.data } : post));
     } catch (err) {
       console.error(err);
@@ -75,7 +75,7 @@ const Posts = () => {
   const deletePost = async (postId) => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
     try {
-      await axios.delete(`/posts/${postId}`, config);
+      await axios.delete(`https://v-task-backend.onrender.com/api/posts/${postId}`, config);
       setPosts(posts.filter(post => post._id !== postId));
     } catch (err) {
       console.error(err);

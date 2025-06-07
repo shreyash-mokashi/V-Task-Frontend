@@ -21,7 +21,7 @@ const CommentForm = ({ postId, onNewComment }) => {
     try {
       const body = JSON.stringify({ text });
       const res = await axios.post(
-        `http://localhost:5000/api/posts/comment/${postId}`,
+        `https://v-task-backend.onrender.com/api/posts/comment/${postId}`,
         body,
         config
       );

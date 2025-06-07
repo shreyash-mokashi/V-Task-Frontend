@@ -25,7 +25,7 @@ const AdminPanel = () => {
   // Fetch posts
   const fetchPosts = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/posts", {
+      const res = await axios.get("/admin/posts", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(res.data);
